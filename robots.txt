@@ -1,0 +1,6 @@
+# Allow Google and all other search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemaps (uncomment when you generate one)
+# Sitemap: https://corepromptai.com/sitemap.xml
