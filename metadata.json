@@ -1,6 +1,0 @@
-{
-  "name": "CorePrompt AI",
-  "description": "A premium AI-powered prompt generator designed to transform raw ideas into polished, effective AI prompts using multiple model styles and a guided builder.",
-  "requestFramePermissions": ["microphone"],
-  "majorCapabilities": []
-}
