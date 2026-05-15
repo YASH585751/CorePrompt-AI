@@ -49,7 +49,7 @@ interface GuideData {
 }
 
 // --- Utils ---
-const IS_UNLIMITED_MODE = false; // Toggle this to false to re-enable limits
+const IS_UNLIMITED_MODE = true; // Toggle this to false to re-enable limits
 const STORAGE_KEY_USAGE = 'clearprompt_usage_count';
 const STORAGE_KEY_DATE = 'clearprompt_last_date';
 const STORAGE_KEY_API_KEY = 'clearprompt_api_key';
