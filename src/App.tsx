@@ -988,8 +988,8 @@ const studentTemplates = [
                   <p className="text-indigo-600 font-bold text-sm uppercase tracking-wider">Founder & Lead Builder</p>
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed font-medium">
-  Hi, I'm Divyansh Singh (Yash), a 17-year-old student developer from a small city in UP, India. I'm a self-taught builder creating tech right from my PC. Every contribution helps fund my higher education and the tech resources I need to keep building. Thank you for being part of my journey! ❤️
-</p>
+                  Hi, I&apos;m Divyansh Singh (Yash), a 17-year-old student developer from a small city in UP, India. I&apos;m a self-taught builder creating tech right from my PC. Every contribution helps fund my higher education and the tech resources I need to keep building. Thank you for being part of my journey! ❤️
+                </p>
               </div>
             </motion.div>
           </div>
