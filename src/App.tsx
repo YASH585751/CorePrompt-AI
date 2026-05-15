@@ -28,7 +28,10 @@ import {
   Mic,
   MicOff,
   ArrowDown,
-  Lightbulb
+  Lightbulb,
+  Twitter,
+  MessageCircle,
+  Link as LinkIcon
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GoogleGenAI, Type } from '@google/genai';
@@ -128,6 +131,11 @@ export default function App() {
   const [prompts, setPrompts] = useState<GeneratedPrompt[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [copyingId, setCopyingId] = useState<string | null>(null);
+  
+  // Share Button State
+  const [isShareMenuOpen, setIsShareMenuOpen] = useState(false);
+  const shareUrl = "https://corepromptai.com/";
+  const shareText = "Check out CorePrompt AI - The ultimate prompt engineering tool by Divyansh Singh (YASH)! 🚀";
   
   const resultsRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
@@ -1382,6 +1390,59 @@ const studentTemplates = [
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Floating Share Button */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <AnimatePresence>
+          {isShareMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 15, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 15, scale: 0.9 }}
+              className="flex flex-col gap-3 mb-2"
+            >
+              {/* WhatsApp Share */}
+              <button 
+                onClick={() => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + " " + shareUrl)}`, '_blank')} 
+                className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+                title="Share on WhatsApp"
+              >
+                <MessageCircle size={22} fill="currentColor" />
+              </button>
+              
+              {/* Twitter (X) Share */}
+              <button 
+                onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank')} 
+                className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform border border-slate-700"
+                title="Share on X (Twitter)"
+              >
+                <Twitter size={20} fill="currentColor" />
+              </button>
+
+              {/* Copy Link */}
+              <button 
+                onClick={() => { 
+                  navigator.clipboard.writeText(shareUrl); 
+                  alert('Link Copied to Clipboard!'); 
+                  setIsShareMenuOpen(false); 
+                }} 
+                className="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform border border-slate-300"
+                title="Copy Link"
+              >
+                <LinkIcon size={20} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Main Toggle Button */}
+        <button
+          onClick={() => setIsShareMenuOpen(!isShareMenuOpen)}
+          className={`w-14 h-14 text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-105 active:scale-95 ${isShareMenuOpen ? 'bg-slate-800' : 'creative-gradient hover:shadow-blue-200'}`}
+        >
+          {isShareMenuOpen ? <X size={24} /> : <Share2 size={24} />}
+        </button>
+      </div>
     </div>
   );
 }
