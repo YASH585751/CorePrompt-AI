@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-# Sitemaps (uncomment when you generate one)
-# Sitemap: https://corepromptai.com/sitemap.xml
+# Sitemaps
+Sitemap: https://corepromptai.com/sitemap.xml
