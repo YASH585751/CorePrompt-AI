@@ -970,7 +970,7 @@ const studentTemplates = [
               <div className="relative shrink-0">
                 <div className="w-32 h-32 rounded-3xl overflow-hidden border-4 border-white shadow-lg rotate-3">
                   <img 
-                    src="input_file_0.png" 
+                    src="/founder.png" 
                     alt="Divyansh Singh (Yash) - Founder & Lead Builder" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
