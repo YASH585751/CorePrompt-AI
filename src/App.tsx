@@ -49,7 +49,7 @@ interface GuideData {
 }
 
 // --- Utils ---
-const IS_UNLIMITED_MODE = true; // Testing ke liye true kiya hai
+const IS_UNLIMITED_MODE = false; // Testing ke liye true kiya hai
 const STORAGE_KEY_USAGE = 'clearprompt_usage_count';
 const STORAGE_KEY_DATE = 'clearprompt_last_date';
 const STORAGE_KEY_API_KEY = 'clearprompt_api_key';
