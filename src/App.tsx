@@ -49,7 +49,7 @@ interface GuideData {
 }
 
 // --- Utils ---
-const IS_UNLIMITED_MODE = true; // Toggle this to false to re-enable limits
+const IS_UNLIMITED_MODE = true; // Testing ke liye true kiya hai
 const STORAGE_KEY_USAGE = 'clearprompt_usage_count';
 const STORAGE_KEY_DATE = 'clearprompt_last_date';
 const STORAGE_KEY_API_KEY = 'clearprompt_api_key';
@@ -330,8 +330,8 @@ const studentTemplates = [
     });
 
     try {
-      // Use stored user API key or fallback to environment key (managed by system)
-      const effectiveKey = storedApiKey || import.meta.env.VITE_GEMINI_KEY;
+      // YAHAN PAR TUMHARI API KEY DIRECTLY DAAL DI GAYI HAI
+      const effectiveKey = storedApiKey || 'AIzaSyDBQP0mtOpxN_nM3tq8k4t51evHwPWjQbg';
       if (!effectiveKey) throw new Error('No API Key available');
 
       const ai = new GoogleGenAI({ apiKey: effectiveKey });
