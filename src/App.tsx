@@ -988,8 +988,8 @@ const studentTemplates = [
                   <p className="text-indigo-600 font-bold text-sm uppercase tracking-wider">Founder & Lead Builder</p>
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed font-medium">
-                  Hi, I'm Divyansh Singh (YASH), a 16-year-old self-taught developer from Unnao. My mission is to build logical AI tools that bridge the gap between human creativity and machine logic. CorePrompt AI is my first major step in that direction, designed to help you generate high-performing prompts effortlessly. Every contribution helps me fund my higher education and keep building. Thank you for being part of my journey! ❤️
-                </p>
+  Hi, I'm Divyansh Singh (Yash), a 17-year-old student developer from a small city in UP, India. I'm a self-taught builder creating tech right from my PC. Every contribution helps fund my higher education and the tech resources I need to keep building. Thank you for being part of my journey! ❤️
+</p>
               </div>
             </motion.div>
           </div>
